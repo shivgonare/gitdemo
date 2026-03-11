@@ -12,6 +12,8 @@ public class PipelineApplication {
 
     public static void main(String[] args) {
 
+        System.out.println("Running on MAIN branch");
+
         PipelineOptionsConfig options =
                 PipelineOptionsFactory
                         .fromArgs(args)
