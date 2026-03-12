@@ -7,7 +7,9 @@ import org.apache.beam.sdk.transforms.DoFn;
 public class ListFilesDoFn extends DoFn<String, String>
 {
 
-    System.out.println("ListFilesDoFn initialized");
+
+
+
     private final Counter fileCounter =
             Metrics.counter(ListFilesDoFn.class, "files_listed");
 
@@ -15,6 +17,7 @@ public class ListFilesDoFn extends DoFn<String, String>
     public void processElement(ProcessContext c)
     {
         String line = c.element();
+        String line2 = c.element();
         fileCounter.inc();
         System.out.println("SOURCE Reading line: " + line);
         c.output(line);
