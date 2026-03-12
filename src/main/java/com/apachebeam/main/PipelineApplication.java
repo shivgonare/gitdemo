@@ -38,6 +38,7 @@ public class PipelineApplication {
 
         Pipeline pipeline = Pipeline.create(options);
 
+        System.out.println(" today is  12 /03 / 2026 ");
 
         if("STREAMING".equalsIgnoreCase(options.getPipelineMode()))
         {
